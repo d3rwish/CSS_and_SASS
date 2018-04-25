@@ -5,10 +5,16 @@ Medium green: #55c57a
 Dark green: #28b485
 */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
@@ -17,7 +23,9 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+
+    box-sizing: border-box;
 }
 
 .header {
@@ -31,17 +39,17 @@ body {
     background-position: top;
     position: relative;
 
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 .text-box {
@@ -56,14 +64,14 @@ body {
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden;
-    margin-bottom: 48px;
+    margin-bottom: 4.8rem;
 }
 
  .heading-primary-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 20px;
+    letter-spacing: 2rem;
 
     animation-name: moveInLeft;
     animation-duration: 0.8s;
@@ -72,9 +80,9 @@ body {
 
 .heading-primary-sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17.5px;
+    letter-spacing: 1.75rem;
 
     
     animation-name: moveInRight;
@@ -85,11 +93,11 @@ body {
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     80% {
-        transform: translate(10px);
+        transform: translate(1rem);
     }   
 
     100% {
@@ -102,11 +110,11 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     80% {
-        transform: translate(-10px);
+        transform: translate(-1rem);
     }   
 
     100% {
@@ -118,32 +126,33 @@ body {
 
 .button:link,
 .button:visited {
+    font-size: 1.6rem;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 100px;
-    border-bottom-left-radius: 16px;
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 1.6rem;
+    border-bottom-right-radius: 10rem;
+    border-bottom-left-radius: 1.6rem;
     transition: all .2s;
     position: relative;
 }
 
 .button:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.3);
+    transform: translateY(-0.4rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
 }
 
 .button:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0,0,0,.3);
+    transform: translateY(-0.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
 }
 
 .btn-heading {
     background-color: #fff;
     color: #777;
-    animation: moveInButton .5s ease-out .75s;
+    animation: moveInButton .8s ease-out .7s;
     animation-fill-mode: backwards;
 }
 
@@ -152,10 +161,10 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 100px;
-    border-bottom-left-radius: 16px;
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 1.6rem;
+    border-bottom-right-radius: 10rem;
+    border-bottom-left-radius: 1.6rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -175,7 +184,7 @@ body {
 @keyframes moveInButton {
     0% {
         opacity: 0;
-        transform: translateY(16px);
+        transform: translateY(1.6rem);
     }
 
     100% {
