@@ -1,0 +1,6 @@
+@mixin button-radius() {
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 1.6rem;
+    border-bottom-right-radius: 10rem;
+    border-bottom-left-radius: 1.6rem;
+}
