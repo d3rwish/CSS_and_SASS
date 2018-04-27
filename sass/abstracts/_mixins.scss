@@ -4,3 +4,11 @@
     border-bottom-right-radius: 10rem;
     border-bottom-left-radius: 1.6rem;
 }
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
